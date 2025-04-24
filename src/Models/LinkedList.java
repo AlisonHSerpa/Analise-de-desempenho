@@ -3,11 +3,48 @@ package Models;
 import FatherModel.FatherObj;
 
 public class LinkedList extends FatherObj {
-
     private No head;
 
-    public LinkedList() {
+    //metodo para ler uma linha de operacao de acordo com o modelo de read do linkedlistReader (linha 23)
+    public void operationLine(String[] OpLine){
+        //instancia possivel descricao de posicao
+        int position;
 
+        //Se a linha descrever a posicao ao qual o numero sera removido/adicionado, salva essa posicao
+        if (OpLine.length == 3) {
+            position = Integer.parseInt(OpLine[2]);
+        }
+        //Se nao descrever, sera adicionado no comeco
+        else{
+            position = 0;
+        }
+
+        if (OpLine[0].equals("A")) {
+            int data = Integer.parseInt(OpLine[1]); //instancia repetida para evitar out of bound
+            insereElementoPosicao(data, position);
+        }
+        else if (OpLine[0].equals("R")) {
+            int data = Integer.parseInt(OpLine[1]); //instancia repetida para evitar out of bound
+            removerElemento(data);
+        }
+        //se for a linha com P, de print
+        else{
+            printList();
+        }
+    }
+
+    //preencher toda a lista com um unico array de strings
+    public void createWithLine(String[] line){
+        for (String s : line) {
+            int data = Integer.parseInt(s);
+            insereFim(data);
+        }
+    }
+
+
+    //metodos padrao de LinkedList
+    public LinkedList() {
+        super();
     }
 
     public No getHead(){
@@ -27,6 +64,7 @@ public class LinkedList extends FatherObj {
         setHead(n);
     }
 
+    //busca um elemento se existir retorna true
     public boolean buscaElemento(int i) {
         //se nao existe lista, retorna falso
         if (head == null){
@@ -48,11 +86,12 @@ public class LinkedList extends FatherObj {
         return true;
     }
 
+    //recebe um valor e devolve o indice desse valor, caso nao encontre, retorna -1
     public int buscaIndice(int i) {
         //contador para salvar os indices da lista
         int count = 0;
 
-        //procura o valor e se chegar no ultimo e nao achar, eh falso
+        //procura o valor e se chegar no ultimo e nao achar, nao existe
         No n = head;
         while (n.getValor() != i){
             if (n.getProximo() != null){
@@ -114,11 +153,12 @@ public class LinkedList extends FatherObj {
         before.setProximo(null);
     }
 
+    //recebe um indice pra remover o No daquele indice
     public void removeIndice(int i) {
         No n = head;
 
         //percorre a lista ate chegar na posicao
-        for (int f= 0; f<i; f++) {
+        for (int f= 1; f<i; f++) {
             n = n.getProximo();
         }
 
@@ -130,7 +170,7 @@ public class LinkedList extends FatherObj {
         //busca a posicao
         No n = head;
         No anterior = n;
-        for (int b=0 ; b<=j ; b++) {
+        for (int b=1 ; b<=j ; b++) {
             anterior = n;
             n = n.getProximo();
 
@@ -147,6 +187,32 @@ public class LinkedList extends FatherObj {
 
         //e anterior comeca a apontar para o novo Models.No da posicao j
         anterior.setProximo(novo);
+    }
+
+    //ve se o elemento existe, e remove o indice onde ele esta
+    public void removerElemento(int i) {
+        if (buscaElemento(i)) {
+            removeIndice(buscaIndice(i));
+        }
+        else {
+            System.out.println("erro ao remover elemento, elemento " +i+ " nao existe");
+        }
+    }
+
+    public void printList(){
+        if (head == null){
+            System.out.println("Lista vazia");
+        }
+        else{
+            //percorre e printa a lista ligada
+            No n = head;
+            System.out.print("Lista: ");
+            while (n.getProximo() != null){
+                System.out.print(n.getValor()+ " ");
+                n = n.getProximo();
+            }
+            System.out.println(n.getValor());
+        }
     }
 
 }
