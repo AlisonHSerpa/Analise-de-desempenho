@@ -5,9 +5,12 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
+        //esse main eh apenas para teste
+
+        //cria o reader, instancia o file de teste e le o file de teste
         LinkedListReader reader = new LinkedListReader();
         File file = new File("src/test/text.txt");
-
+        
         if (file.exists()) {
             reader.readFile(file);
         }
