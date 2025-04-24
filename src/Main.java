@@ -6,6 +6,7 @@ import java.io.File;
 public class Main {
     public static void main(String[] args) {
         //esse main eh apenas para testes
+
         LinkedListReader reader = new LinkedListReader();
         File file = new File("src/test/text.txt");
 
