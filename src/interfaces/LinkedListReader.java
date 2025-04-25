@@ -1,7 +1,7 @@
-package Models;
+package interfaces;
 
 import FatherModel.FatherObj;
-import interfaces.Reader;
+import Models.LinkedList;
 
 import java.io.File;
 import java.util.Scanner;

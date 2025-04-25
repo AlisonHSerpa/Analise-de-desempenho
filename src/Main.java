@@ -1,5 +1,4 @@
-import FatherModel.FatherObj;
-import Models.LinkedListReader;
+import interfaces.LinkedListReader;
 
 import java.io.File;
 
