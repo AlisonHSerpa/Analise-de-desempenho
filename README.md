@@ -18,13 +18,13 @@ Explorar a implementação e o funcionamento interno de estruturas clássicas de
 │   ├── FatherModel
 │       └── FatherOBJ.Java
 │   ├── Models
-        └── LinkedList.java
-        └── No.java
+│       └── LinkedList.java
+│       └── No.java
 │   ├── interfaces
-        └── Reader.java
-        └── LinkedListReader.java
+│       └── Reader.java
+│       └── LinkedListReader.java
 │   ├── test
-        └── text.txt
+│       └── text.txt
 │   ├── Main.java
 ├── .gitignore
 ├── Analise de desempenho.iml
