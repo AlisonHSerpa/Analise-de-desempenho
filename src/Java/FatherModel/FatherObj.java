@@ -1,4 +1,4 @@
-package FatherModel;
+package Java.FatherModel;
 
 public class FatherObj {
     public FatherObj() {

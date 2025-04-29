@@ -1,7 +1,7 @@
-package interfaces;
+package Java.interfaces;
 
-import FatherModel.FatherObj;
-import Models.LinkedList;
+import Java.FatherModel.FatherObj;
+import Java.Models.LinkedList;
 
 import java.io.File;
 import java.util.Scanner;

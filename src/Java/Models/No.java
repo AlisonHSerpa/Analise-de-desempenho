@@ -1,4 +1,4 @@
-package Models;
+package Java.Models;
 
 public class No {
     int valor;
