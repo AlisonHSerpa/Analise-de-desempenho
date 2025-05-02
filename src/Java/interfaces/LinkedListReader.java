@@ -18,7 +18,6 @@ public class LinkedListReader implements Reader {
 
         //exception para caso nao encontrar aquivo
         try{
-            System.out.println("Reading file " + file.getName());
             sc = new Scanner(file);
 
             //scanner vai ler o arquivo, dai a arquitetura do arquivo eh especifica
@@ -29,11 +28,9 @@ public class LinkedListReader implements Reader {
 
                 //Segunda fala quantas operacoes serao realizadas
                 int operations = Integer.parseInt(sc.nextLine());
-                System.out.println("Operations: " + operations);
 
                 //Terceira em diante usa A(adicionar) e R(remover) no inicio, numero e posição
                 for (int i = 0; i < operations; i++) {
-                    System.out.println("Executing operation " + (i+1));
                     //linha de operacao
                     String[] OpLine = sc.nextLine().split(" ");
                     ((LinkedList) list).operationLine(OpLine);

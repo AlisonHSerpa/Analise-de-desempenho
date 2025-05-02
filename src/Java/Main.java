@@ -10,7 +10,7 @@ public class Main {
 
         //criando arquivo e reader, verifica se o arquivo existe e dps le
         LinkedListReader reader = new LinkedListReader();
-        File file = new File("src/Java.test/text.txt");
+        File file = new File("D:\\projects\\Analise de desempenho\\src\\Java\\test\\text.txt");
 
         if (file.exists()) {
             reader.readFile(file);
