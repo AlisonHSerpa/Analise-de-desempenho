@@ -4,7 +4,6 @@ class node:
         self.dado = dado
         self.proximo = None
 
-# Classe LinkedList
 class linkedList:
     def __init__(self):
         self.cabeca = None
@@ -12,7 +11,7 @@ class linkedList:
         # Médoto para adicionar no inicio da lista
     def adicionar_no_inicio(self, dado):
         novo_no = node(dado)
-        # Se a lista estiver vazia, o novo nó se torna o no cabeca
+        # Se a lista estiver vazia, o novo no se torna o no cabeca
         if not self.cabeca: 
             self.cabeca = novo_no
             return
@@ -21,19 +20,19 @@ class linkedList:
         self.cabeca = novo_no
         
 
-    # Método Adicionar, esse método inseri um novo nó em uma posição especifica
+    # Metodo Adicionar, esse metodo inseri um novo no em uma posicao especifica
     def inserir_na_posicao(self, dado, posicao):
-        # Cria um novo nó com o valor fornecido pelo arquivo de texto
+        # Cria um novo no com o valor fornecido pelo arquivo de texto
         novo_no = node(dado) 
-        # Se a posição for 0, insere o novo nó no inicio(cabeça)
+        # Se a posicao for 0, insere o novo no no inicio(cabeca)
         if posicao == 0:
             novo_no.proximo = self.cabeca
             self.cabeca = novo_no
             return
-        # Caso contrário, percorre a lista até a posição anterior a posição desejada
+        # Caso contrario, percorre a lista ate a posicao anterior a posicao desejada
         atual = self.cabeca
         for _ in range(posicao - 1):
-            # Se a posição não existe, encerra
+            # Se a posição nao existe, encerra
             if atual is None: 
                 return
             atual = atual.proximo
@@ -45,36 +44,36 @@ class linkedList:
         atual.proximo = novo_no
         # [atual] -> [novo_no] -> [X]
 
-        # Método Remover o primeiro nó com um valor específico
+        # Método Remover o primeiro no com um valor especifico
     def remover(self, valor):
-        # Se a lista estiver vazia, encerra a execução
+        # Se a lista estiver vazia, encerra a execucao
         if self.cabeca is None:
             return
         
-        # Caso o valor esteja no primeiro nó (cabeça), ajusta a cabeça para o próximo nó
+        # Caso o valor esteja no primeiro no (cabeca), ajusta a cabeça para o proximo no
         if self.cabeca.dado == valor:
             self.cabeca = self.cabeca.proximo
             return
 
-        # Percorre a lista para encontrar o nó com o valor desejado
+        # Percorre a lista para encontrar o no com o valor desejado
         atual = self.cabeca
         anterior = None
         while atual is not None and atual.dado != valor:
             anterior = atual
             atual = atual.proximo
 
-        # Se o nó com o valor foi encontrado, remove-o
+        # Se o no com o valor foi encontrado, remove-o
         if atual is not None:
             anterior.proximo = atual.proximo
 
 
-    # Método Imprimir a lista, metodo que vai exibir os elementos da lista.
+    # Metodo Imprimir a lista, metodo que vai exibir os elementos da lista.
     def exibir(self):
         # Cria uma lista para armazenar os valores.
         elementos = []
-        # Inicia do nó cabeça(primeiro nó)
+        # Inicia do no cabeça(primeiro no)
         atual = self.cabeca
-        # Percorre a lista e adiciona cada valor à lista 'elementos'
+        # Percorre a lista e adiciona cada valor a lista 'elementos'
         while atual:
             elementos.append(atual.dado)
             atual = atual.proximo

@@ -6,7 +6,7 @@ def processar_arquivo(nome_arquivo):
     lista_encadeada = ListaEncadeada()
 
     # Abre o arquivo para leitura
-    with open(nome_arquivo, 'r' ,encoding='utf-8-sig') as arquivo:
+    with open(nome_arquivo, 'r', encoding="utf-8") as arquivo:
         # Lê a primeira linha com os valores iniciais para a lista
         valores_iniciais = map(int, arquivo.readline().strip().split())
         for valor in valores_iniciais:
@@ -41,6 +41,6 @@ def processar_arquivo(nome_arquivo):
     return lista_encadeada # Retorna a lista encadeada final
 
 # Testendo o código
-nome_arquivo = 'exemplo.txt'
+nome_arquivo = "D:/projects/Analise de desempenho/src/test/text.txt"
 
 lista_encadeada = processar_arquivo(nome_arquivo)
