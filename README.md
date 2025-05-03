@@ -12,9 +12,9 @@ Explorar a implementação e o desempenho de estruturas clássicas de dados, bem
 
 ## ⚙️ Linguagens implementadas
 
--Java
--Python
--Java Script (JS)
+- Java
+- Python
+- Java Script (JS)
 
 ## 🏠 Arquitetura do projeto
 ```
