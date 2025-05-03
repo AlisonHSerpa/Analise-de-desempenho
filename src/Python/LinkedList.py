@@ -1,83 +1,63 @@
-# Classe No da linkedList
-class node:
-    def __init__(self, dado):
-        self.dado = dado
+class No:
+    def __init__(self, valor):
+        self.valor = valor
         self.proximo = None
 
-class linkedList:
+class ListaEncadeada:
     def __init__(self):
         self.cabeca = None
-
-        # Médoto para adicionar no inicio da lista
-    def adicionar_no_inicio(self, dado):
-        novo_no = node(dado)
-        # Se a lista estiver vazia, o novo no se torna o no cabeca
-        if not self.cabeca: 
+    
+    def adicionar_no_final(self, valor):
+        novo_no = No(valor)
+        if not self.cabeca:
             self.cabeca = novo_no
             return
-        # Caso contrário fazer novo_no virar a cabeca
-        novo_no.next = self.cabeca
-        self.cabeca = novo_no
-        
-
-    # Metodo Adicionar, esse metodo inseri um novo no em uma posicao especifica
-    def inserir_na_posicao(self, dado, posicao):
-        # Cria um novo no com o valor fornecido pelo arquivo de texto
-        novo_no = node(dado) 
-        # Se a posicao for 0, insere o novo no no inicio(cabeca)
-        if posicao == 0:
-            novo_no.proximo = self.cabeca
-            self.cabeca = novo_no
-            return
-        # Caso contrario, percorre a lista ate a posicao anterior a posicao desejada
         atual = self.cabeca
-        for _ in range(posicao - 1):
-            # Se a posição nao existe, encerra
-            if atual is None: 
-                return
+        while atual.proximo:
             atual = atual.proximo
-        if atual is None:
-            return
-        # Insere o novo nó na posição especifica e ajusta os ponteiros
-        # [atual] -> [X]
-        novo_no.proximo = atual.proximo
         atual.proximo = novo_no
-        # [atual] -> [novo_no] -> [X]
-
-        # Método Remover o primeiro no com um valor especifico
+    
+    def adicionar_no_inicio(self, valor):
+        novo_no = No(valor)
+        novo_no.proximo = self.cabeca
+        self.cabeca = novo_no
+    
     def remover(self, valor):
-        # Se a lista estiver vazia, encerra a execucao
-        if self.cabeca is None:
-            return
-        
-        # Caso o valor esteja no primeiro no (cabeca), ajusta a cabeça para o proximo no
-        if self.cabeca.dado == valor:
-            self.cabeca = self.cabeca.proximo
-            return
-
-        # Percorre a lista para encontrar o no com o valor desejado
         atual = self.cabeca
         anterior = None
-        while atual is not None and atual.dado != valor:
+        while atual:
+            if atual.valor == valor:
+                if anterior:
+                    anterior.proximo = atual.proximo
+                else:
+                    self.cabeca = atual.proximo
+                return True
             anterior = atual
             atual = atual.proximo
-
-        # Se o no com o valor foi encontrado, remove-o
-        if atual is not None:
-            anterior.proximo = atual.proximo
-
-
-    # Metodo Imprimir a lista, metodo que vai exibir os elementos da lista.
-    def exibir(self):
-        # Cria uma lista para armazenar os valores.
-        elementos = []
-        # Inicia do no cabeça(primeiro no)
+        return False
+    
+    def inserir_na_posicao(self, valor, posicao):
+        if posicao == 0:
+            self.adicionar_no_inicio(valor)
+            return
+        
+        novo_no = No(valor)
         atual = self.cabeca
-        # Percorre a lista e adiciona cada valor a lista 'elementos'
-        while atual:
-            elementos.append(atual.dado)
+        for _ in range(posicao - 1):
+            if not atual:
+                raise IndexError("Posição fora do alcance")
             atual = atual.proximo
-        # Imprime os valores da lista separados por " -> "
-        print(" -> ".join(map(str, elementos)))
-
-
+        
+        if not atual:
+            raise IndexError("Posição fora do alcance")
+        
+        novo_no.proximo = atual.proximo
+        atual.proximo = novo_no
+    
+    def imprimir(self):
+        elementos = []
+        atual = self.cabeca
+        while atual:
+            elementos.append(str(atual.valor))
+            atual = atual.proximo
+        print(' '.join(elementos) if elementos else "Lista vazia")
