@@ -12,8 +12,9 @@ Explorar a implementação e o desempenho de estruturas clássicas de dados, bem
 
 ## ⚙️ Linguagens implementadas
 
--Java
--Python
+- Java
+- Python
+- Java Script (JS)
 
 ## 🏠 Arquitetura do projeto
 ```
@@ -32,6 +33,9 @@ Explorar a implementação e o desempenho de estruturas clássicas de dados, bem
 │   │   │   ├── LinkedList.java
 │   │   │   └── No.java
 │   │   └── Main.java
+│   ├── JS/
+│   │   ├── Linkedlist.js
+│   │   └── Reader.js
 │   ├── Python/
 │   │   ├── LinkedList.py
 │   │   └── Reader.py
@@ -50,10 +54,11 @@ Na atual versão deste programa, é necessario programar no main o diretorio par
 
 ## ▶️ Como Executar
 
-1. Baixe o `Python 3.7` e o `java 23` 
+1. Baixe o `Python 3.7`, `java 23` e `nodeJS 22.15`
 1. Clone este repositório na sua IDE
 3. Para executar o programa em **java**, execute o arquivo `main.java`
 4. Para executar o programa em **Python**, execute o arquivo `Reader.py`
+5. Para executar o programa em **Python**, vá ao diretoório do arquivo `Reader.js` no terminal e digite `node Reader.js`
 
 ## 👨‍💻 Autor
 
