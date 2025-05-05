@@ -37,5 +37,13 @@ def processar_arquivo(nome_arquivo):
     
     return lista
 
+# Caminho do teste
+import os
+
+if os.name == 'nt':  # Windows
+    caminho = 'D:/projects/Analise de desempenho/src/test/text.txt'
+else:  # Linux/WSL
+    caminho = '/mnt/d/projects/Analise de desempenho/src/test/text.txt'
+
 # Testendo o código
-lista_final = processar_arquivo('D:/projects/Analise de desempenho/src/test/text.txt')
+lista_final = processar_arquivo(caminho)

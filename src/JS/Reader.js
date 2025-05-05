@@ -1,6 +1,5 @@
 const LinkedList = require('./Linkedlist.js');
 const fs = require('fs');
-const path = require('path');
 
 class FileProcessor {
     constructor() {
@@ -88,8 +87,20 @@ class FileProcessor {
     }
 }
 
+const os = require('os');
+const path = require('path');
+
+let caminho;
+
+// Verificar o sistema operacional
+if (os.platform() === 'win32') {  // Windows
+    caminho = path.join('D:', 'projects', 'Analise de desempenho', 'src', 'test', 'text.txt');
+} else {  // Linux/WSL
+    caminho = path.join('/mnt', 'd', 'projects', 'Analise de desempenho', 'src', 'test', 'text.txt');
+}
+
 // Uso
 (async () => {
     const processor = new FileProcessor();
-    await processor.processFile('../test/text.txt');
+    await processor.processFile(caminho);
 })();

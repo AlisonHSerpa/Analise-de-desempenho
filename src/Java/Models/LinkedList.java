@@ -1,5 +1,4 @@
 package Java.Models;
-
 import Java.FatherModel.FatherObj;
 
 public class LinkedList extends FatherObj {
