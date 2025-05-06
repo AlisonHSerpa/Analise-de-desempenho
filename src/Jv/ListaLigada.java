@@ -204,12 +204,17 @@ public class ListaLigada {
         else{
             //percorre e printa a lista ligada
             No n = head;
-            System.out.print("Lista: ");
+
+            //metodo do stringbuilder para acelerar os prints
+            StringBuilder buffer = new StringBuilder();
             while (n.getProximo() != null){
-                System.out.print(n.getValor()+ " ");
+                buffer.append(n.getValor()).append(' ');
                 n = n.getProximo();
             }
-            System.out.println(n.getValor());
+
+            //ultimo no
+            buffer.append(n.getValor()).append('\n');
+            System.out.print(buffer.toString());
         }
     }
 
