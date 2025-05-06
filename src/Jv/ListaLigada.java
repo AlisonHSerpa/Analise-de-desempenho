@@ -1,7 +1,6 @@
-package Java.Models;
-import Java.FatherModel.FatherObj;
+package Jv;
 
-public class LinkedList extends FatherObj {
+public class ListaLigada {
     private No head;
 
     //metodo para ler uma linha de operacao de acordo com o modelo de read do linkedlistReader (linha 23)
@@ -42,7 +41,7 @@ public class LinkedList extends FatherObj {
 
 
     //metodos padrao de LinkedList
-    public LinkedList() {
+    public ListaLigada() {
         super();
     }
 
@@ -107,7 +106,7 @@ public class LinkedList extends FatherObj {
     }
 
     public void insereFim(int i) {
-        //se nao existir cabeca, ele cria um Java.Models.No e adiciona
+        //se nao existir cabeca, ele cria um Jv.No e adiciona
         if (head == null){
             head = new No(i);
             return;
@@ -127,7 +126,7 @@ public class LinkedList extends FatherObj {
             return;
         }
 
-        //define que a nova cabeca deve ser o proximo Java.Models.No da antiga cabeca
+        //define que a nova cabeca deve ser o proximo Jv.No da antiga cabeca
         No newHead = head.getProximo();
         //seta a nova cabeca
         setHead(newHead);
@@ -138,7 +137,7 @@ public class LinkedList extends FatherObj {
             return;
         }
 
-        //o Java.Models.No n vai percorrer a lista, o Java.Models.No Before vai seguir o n até que n seja o ultimo
+        //o Jv.No n vai percorrer a lista, o Jv.No Before vai seguir o n até que n seja o ultimo
         //dai o proximo de before vira null
         No n = head;
         No before = n;
@@ -180,11 +179,11 @@ public class LinkedList extends FatherObj {
             }
         }
 
-        //caso contrario colocar i para apontar para o Java.Models.No na posicao j
+        //caso contrario colocar i para apontar para o Jv.No na posicao j
         No novo = new No(i);
         novo.setProximo(n);
 
-        //e anterior comeca a apontar para o novo Java.Models.No da posicao j
+        //e anterior comeca a apontar para o novo Jv.No da posicao j
         anterior.setProximo(novo);
     }
 

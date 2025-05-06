@@ -1,5 +1,4 @@
-package Java;
-import Java.interfaces.LinkedListReader;
+package Jv;
 import java.io.File;
 
 public class Main {

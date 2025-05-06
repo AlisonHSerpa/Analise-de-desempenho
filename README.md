@@ -1,6 +1,6 @@
-# Projeto Acadêmico - Testes de Estruturas de Dados em Java
+# Projeto Acadêmico - Testes de Estruturas de Dados em Jv
 
-Este projeto foi desenvolvido com fins **estritamente acadêmicos** para auxiliar no entendimento e prática de **analise de desempenho** em Java. Todos os algoritmos e estruturas foram implementados manualmente, sem o uso de bibliotecas externas.
+Este projeto foi desenvolvido com fins **estritamente acadêmicos** para auxiliar no entendimento e prática de **analise de desempenho** em Jv. Todos os algoritmos e estruturas foram implementados manualmente, sem o uso de bibliotecas externas.
 
 ## 📘 Objetivo
 
@@ -12,9 +12,9 @@ Explorar a implementação e o desempenho de estruturas clássicas de dados, bem
 
 ## ⚙️ Linguagens implementadas
 
-- Java
+- Jv
 - Python
-- Java Script (JS)
+- Jv Script (JS)
 
 ## 🏠 Arquitetura do projeto
 ```
@@ -23,21 +23,21 @@ Explorar a implementação e o desempenho de estruturas clássicas de dados, bem
 ├── .vscode/
 ├── out/
 ├── src/
-│   ├── Java/
+│   ├── Jv/
 │   │   ├── FatherModel/
 │   │   │   └── FatherObj.java
 │   │   ├── interfaces/
 │   │   │   ├── LinkedListReader.java
 │   │   │   └── Reader.java
 │   │   ├── Models/
-│   │   │   ├── LinkedList.java
+│   │   │   ├── ListaLigada.java
 │   │   │   └── No.java
 │   │   └── Main.java
 │   ├── JS/
 │   │   ├── Linkedlist.js
 │   │   └── Reader.js
 │   ├── Python/
-│   │   ├── LinkedList.py
+│   │   ├── ListaLigada.py
 │   │   └── Reader.py
 │   └── test/
 │       └── text.txt

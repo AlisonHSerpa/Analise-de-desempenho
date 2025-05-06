@@ -1,20 +1,15 @@
-package Java.interfaces;
-
-import Java.FatherModel.FatherObj;
-import Java.Models.LinkedList;
+package Jv;
 
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 
-public class LinkedListReader implements Reader {
+public class LinkedListReader {
     //Scanner deve começar null e terminar null
     Scanner sc = null;
 
     public void readFile(File file) {
-        //to usando poliformismo para a as classes retornarem diferentes objetos
-        //confira a classe FatherObj para mais detalhes
-        FatherObj list = new LinkedList();
+        ListaLigada list = new ListaLigada();
 
         //exception para caso nao encontrar aquivo
         try{
@@ -24,7 +19,7 @@ public class LinkedListReader implements Reader {
             while (sc.hasNextLine()) {
                 //primeira linha enche a lista
                 String[] dataList = sc.nextLine().split(" ");
-                ((LinkedList) list).createWithLine(dataList);
+                list.createWithLine(dataList);
 
                 //Segunda fala quantas operacoes serao realizadas
                 int operations = Integer.parseInt(sc.nextLine());
@@ -33,8 +28,7 @@ public class LinkedListReader implements Reader {
                 for (int i = 0; i < operations; i++) {
                     //linha de operacao
                     String[] OpLine = sc.nextLine().split(" ");
-                    ((LinkedList) list).operationLine(OpLine);
-                    ((LinkedList) list).printList();
+                    list.operationLine(OpLine);
                 }
             }
         }

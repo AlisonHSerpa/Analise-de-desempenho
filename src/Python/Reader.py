@@ -19,7 +19,7 @@ def processar_arquivo(nome_arquivo):
                 
             if linha == 'P':
                 lista.imprimir()
-            elif linha.startswith('A'):
+            if linha.startswith('A'):
                 partes = linha.split()
                 valor = int(partes[1])
                 if len(partes) == 3:  # A valor posicao
