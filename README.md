@@ -12,40 +12,9 @@ Explorar a implementação e o desempenho de estruturas clássicas de dados, bem
 
 ## ⚙️ Linguagens implementadas
 
-- Jv
+- Java
 - Python
 - Jv Script (JS)
-
-## 🏠 Arquitetura do projeto
-```
-  Analise-de-desempenho/
-├── .idea/
-├── .vscode/
-├── out/
-├── src/
-│   ├── Jv/
-│   │   ├── FatherModel/
-│   │   │   └── FatherObj.java
-│   │   ├── interfaces/
-│   │   │   ├── LinkedListReader.java
-│   │   │   └── Reader.java
-│   │   ├── Models/
-│   │   │   ├── ListaLigada.java
-│   │   │   └── No.java
-│   │   └── Main.java
-│   ├── JS/
-│   │   ├── Linkedlist.js
-│   │   └── Reader.js
-│   ├── Python/
-│   │   ├── ListaLigada.py
-│   │   └── Reader.py
-│   └── test/
-│       └── text.txt
-├── .gitignore
-├── Analise de desempenho.iml
-└── README.md
-
-```
 
 ## 🧪 Testes Realizados
 
@@ -54,11 +23,42 @@ Na atual versão deste programa, é necessario programar no main o diretorio par
 
 ## ▶️ Como Executar
 
-1. Baixe o `Python 3.7`, `java 23` e `nodeJS 22.15`
-1. Clone este repositório na sua IDE
-3. Para executar o programa em **java**, execute o arquivo `main.java`
-4. Para executar o programa em **Python**, execute o arquivo `Reader.py`
-5. Para executar o programa em **Python**, vá ao diretoório do arquivo `Reader.js` no terminal e digite `node Reader.js`
+1. Baixe e instale as seguintes versões:
+
+   * `Python 3.10`
+   * `Java 23`
+   * `Node.js 22.15`
+
+2. Clone este repositório em sua máquina local:
+3. Para executar o programa em **Java**:
+
+   * Compile e execute o arquivo `Main.java` usando os seguintes comandos no terminal:
+
+   ```bash
+   javac -d . *.java
+   java Main
+   ```
+
+   OBS: você deve estar no diretório correto para executar esses comandos.
+
+4. Para executar o programa em **Python**:
+
+   * No terminal, navegue até o diretório onde está o arquivo `Reader.py` e execute:
+
+   ```bash
+   python Reader.py
+   ```
+  
+   OBS: no Linux, o comando certo deve ser `python3`
+
+5. Para executar o programa em **JavaScript (Node.js)**:
+
+   * No terminal, navegue até o diretório onde está o arquivo `Reader.js` e execute:
+
+   ```bash
+   node Reader.js
+   ```
+
 
 ## 👨‍💻 Autor
 
