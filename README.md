@@ -12,40 +12,9 @@ Explorar a implementação e o desempenho de estruturas clássicas de dados, bem
 
 ## ⚙️ Linguagens implementadas
 
-- Jv
+- Java
 - Python
 - Jv Script (JS)
-
-## 🏠 Arquitetura do projeto
-```
-  Analise-de-desempenho/
-├── .idea/
-├── .vscode/
-├── out/
-├── src/
-│   ├── Jv/
-│   │   ├── FatherModel/
-│   │   │   └── FatherObj.java
-│   │   ├── interfaces/
-│   │   │   ├── LinkedListReader.java
-│   │   │   └── Reader.java
-│   │   ├── Models/
-│   │   │   ├── ListaLigada.java
-│   │   │   └── No.java
-│   │   └── Main.java
-│   ├── JS/
-│   │   ├── Linkedlist.js
-│   │   └── Reader.js
-│   ├── Python/
-│   │   ├── ListaLigada.py
-│   │   └── Reader.py
-│   └── test/
-│       └── text.txt
-├── .gitignore
-├── Analise de desempenho.iml
-└── README.md
-
-```
 
 ## 🧪 Testes Realizados
 
