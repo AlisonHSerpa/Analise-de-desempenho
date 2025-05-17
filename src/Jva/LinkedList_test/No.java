@@ -1,4 +1,4 @@
-package Jv.LinkedList_test;
+package Jva.LinkedList_test;
 
 public class No {
     int valor;

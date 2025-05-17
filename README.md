@@ -1,6 +1,6 @@
-# Projeto Acadêmico - Testes de Estruturas de Dados em Jv
+# Projeto Acadêmico - Testes de Estruturas de Dados em Jva
 
-Este projeto foi desenvolvido com fins **estritamente acadêmicos** para auxiliar no entendimento e prática de **analise de desempenho** em Jv. Todos os algoritmos e estruturas foram implementados manualmente, sem o uso de bibliotecas externas.
+Este projeto foi desenvolvido com fins **estritamente acadêmicos** para auxiliar no entendimento e prática de **analise de desempenho** em Jva. Todos os algoritmos e estruturas foram implementados manualmente, sem o uso de bibliotecas externas.
 
 ## 📘 Objetivo
 
@@ -14,7 +14,7 @@ Explorar a implementação e o desempenho de estruturas clássicas de dados, bem
 
 - Java
 - Python
-- Jv Script (JS)
+- Jva Script (JS)
 
 ## 🧪 Testes Realizados
 

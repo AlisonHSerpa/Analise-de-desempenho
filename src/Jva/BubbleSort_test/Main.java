@@ -1,7 +1,6 @@
-package Jv.BubbleSort_test;
+package Jva.BubbleSort_test;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -24,16 +23,33 @@ public class Main {
         }
     }
 
+    public static void writeFile(ArrayList<Integer> list) {
+        String mkdir = System.getProperty("user.dir");
+        try (FileWriter fw = new FileWriter(mkdir +"/log_Java.txt", true)) {
+
+            for (Integer number : list) {
+                fw.write(number.toString());
+                fw.write(System.lineSeparator());
+            }
+
+        } catch (IOException e) {
+            System.out.println("Erro ao escrever no arquivo.");
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) throws FileNotFoundException {
         File test = new File("D:/projects/Analise de desempenho/src/test2/arq.txt");
         ArrayList<Integer> list = new ArrayList<>();
+
         System.gc();
 
         long memoriaAntes = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 
-        //cria lista, preenche a lista, organiza a lista
+        //cria lista, preenche a lista, organiza a lista, escrever arquivo
         readNumbers(test, list);
         BubbleSort.bubbleSort(list);
+        writeFile(list);
 
         long memoriaDepois = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 

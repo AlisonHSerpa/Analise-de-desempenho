@@ -1,4 +1,4 @@
-package Jv.LinkedList_test;
+package Jva.LinkedList_test;
 
 import java.io.File;
 import java.util.Scanner;

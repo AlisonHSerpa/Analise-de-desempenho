@@ -1,4 +1,4 @@
-package Jv.LinkedList_test;
+package Jva.LinkedList_test;
 
 public class ListaLigada {
     private No head;
@@ -106,7 +106,7 @@ public class ListaLigada {
     }
 
     public void insereFim(int i) {
-        //se nao existir cabeca, ele cria um Jv.No e adiciona
+        //se nao existir cabeca, ele cria um Jva.No e adiciona
         if (head == null){
             head = new No(i);
             return;
@@ -126,7 +126,7 @@ public class ListaLigada {
             return;
         }
 
-        //define que a nova cabeca deve ser o proximo Jv.No da antiga cabeca
+        //define que a nova cabeca deve ser o proximo Jva.No da antiga cabeca
         No newHead = head.getProximo();
         //seta a nova cabeca
         setHead(newHead);
@@ -137,7 +137,7 @@ public class ListaLigada {
             return;
         }
 
-        //o Jv.No n vai percorrer a lista, o Jv.No Before vai seguir o n até que n seja o ultimo
+        //o Jva.No n vai percorrer a lista, o Jva.No Before vai seguir o n até que n seja o ultimo
         //dai o proximo de before vira null
         No n = head;
         No before = n;
@@ -179,11 +179,11 @@ public class ListaLigada {
             }
         }
 
-        //caso contrario colocar i para apontar para o Jv.No na posicao j
+        //caso contrario colocar i para apontar para o Jva.No na posicao j
         No novo = new No(i);
         novo.setProximo(n);
 
-        //e anterior comeca a apontar para o novo Jv.No da posicao j
+        //e anterior comeca a apontar para o novo Jva.No da posicao j
         anterior.setProximo(novo);
     }
 
