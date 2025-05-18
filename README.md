@@ -1,69 +1,119 @@
-# Projeto Acadêmico - Testes de Estruturas de Dados em Jva
+# 📊 Projeto Acadêmico — Análise de Desempenho
 
-Este projeto foi desenvolvido com fins **estritamente acadêmicos** para auxiliar no entendimento e prática de **analise de desempenho** em Jva. Todos os algoritmos e estruturas foram implementados manualmente, sem o uso de bibliotecas externas.
+Este repositório foi desenvolvido com fins estritamente acadêmicos, com o objetivo de aprofundar a compreensão e a prática da análise de desempenho em diferentes linguagens de programação. Todas as estruturas de dados e algoritmos foram implementados manualmente, **sem o uso de bibliotecas externas**.
 
-## 📘 Objetivo
+---
 
-Explorar a implementação e o desempenho de estruturas clássicas de dados, bem como testar seus principais métodos de forma prática e analisar o tempo de execução em diferentes linguagens de programação dessa desta estrutura.
+## 🎯 Objetivo
 
-## 🧱 Estruturas de Dados Implementadas
+Explorar a implementação de estruturas clássicas de dados e algoritmos, analisando seu desempenho prático com base em tempo de execução e uso de memória. As comparações são feitas entre três linguagens de programação: **Java**, **Python** e **JavaScript (Node.js)**.
 
-- Lista Encadeada Simples
+---
 
-## ⚙️ Linguagens implementadas
+## ⚙️ Requisitos
 
-- Java
-- Python
-- Jva Script (JS)
+Antes de executar os testes, certifique-se de ter as seguintes ferramentas instaladas:
 
-## 🧪 Testes Realizados
+* [Java 23](https://www.oracle.com/java/technologies/javase-downloads.html)
+* [Python 3.10](https://www.python.org/downloads/release/python-3100/)
+* [Node.js 22.15](https://nodejs.org/)
+* [WSL (Windows Subsystem for Linux)](https://learn.microsoft.com/pt-br/windows/wsl/install) — caso esteja utilizando Windows
+* Git para clonar este repositório:
 
-Cada estrutura possui uma classe reader, que é responsável por ler um txt de arquitetura especifica para realização dos testes.
-Na atual versão deste programa, é necessario programar no main o diretorio para o arquivo, criar um objeto que implementa o Reader e executar o main.
+  ```bash
+  git clone <URL-do-repositório>
+  ```
 
-## ▶️ Como Executar
+---
 
-1. Baixe e instale as seguintes versões:
+## 🧪 Atividade 1 — Lista Encadeada Simples (Simple LinkedList)
 
-   * `Python 3.10`
-   * `Java 23`
-   * `Node.js 22.15`
+### Objetivo
 
-2. Clone este repositório em sua máquina local:
-3. Para executar o programa em **Java**:
+Implementar uma estrutura de lista encadeada simples nas três linguagens, medindo o tempo de execução dos métodos principais:
 
-   * Compile e execute o arquivo `Main.java` usando os seguintes comandos no terminal:
+* Criação
+* Inserção
+* Remoção
+* Impressão
 
-   ```bash
-   javac -d . *.java
-   java Main
-   ```
+### ▶️ Como executar
 
-   OBS: você deve estar no diretório correto para executar esses comandos.
+#### Python
 
-4. Para executar o programa em **Python**:
+```bash
+cd python/LinkedList_test
+time python3 Reader.py
+```
 
-   * No terminal, navegue até o diretório onde está o arquivo `Reader.py` e execute:
+#### Java
 
-   ```bash
-   python Reader.py
-   ```
-  
-   OBS: no Linux, o comando certo deve ser `python3`
+```bash
+cd Java/LinkedList_test
+javac -d . *.java
+time java Main
+```
 
-5. Para executar o programa em **JavaScript (Node.js)**:
+#### Node.js
 
-   * No terminal, navegue até o diretório onde está o arquivo `Reader.js` e execute:
+```bash
+cd JS/LinkedList_test
+time node Reader.js
+```
 
-   ```bash
-   node Reader.js
-   ```
+> 💡 No Windows, recomenda-se o uso do WSL:
 
+```bash
+wsl --install
+```
+
+---
+
+## 🧪 Atividade 2 — Algoritmos de Ordenação (Sort)
+
+### Objetivo
+
+Avaliar o **tempo de execução** e o **uso de memória** de algoritmos de ordenação (Bubble Sort e Selection Sort) implementados nas três linguagens.
+
+### ▶️ Como executar
+
+#### Python
+
+```bash
+cd python/Sort_test
+python3 BubbleSort.py
+python3 SelectionSort.py
+```
+
+#### Java
+
+```bash
+cd Java/Sort_test
+javac -d . *.java
+java Main
+```
+
+#### Node.js
+
+```bash
+cd JS/Sort_test
+node Reader.js
+```
+
+> 💡 No Windows, recomenda-se o uso do WSL:
+
+```bash
+wsl --install
+```
+
+---
+
+## 🔎 Conclusões
+
+> *Espaço reservado para inserção dos resultados obtidos nas análises de desempenho.*
+
+---
 
 ## 👨‍💻 Autor
 
-Desenvolvido por Alison Serpa, como parte dos estudos em Analise de desempenho no curso de Engenharia da Computação da UFRPE na Unidade Academica de Belo Jardim (UABJ).
-
-## 📄 Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
+Desenvolvido por **Alison Serpa**, como parte dos estudos em Análise de Desempenho no curso de **Engenharia da Computação** da **Universidade Federal Rural de Pernambuco (UFRPE)** — Unidade Acadêmica de Belo Jardim (UABJ).
