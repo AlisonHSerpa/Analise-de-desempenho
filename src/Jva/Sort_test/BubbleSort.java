@@ -1,4 +1,4 @@
-package Jva.BubbleSort_test;
+package Jva.Sort_test;
 
 import java.util.ArrayList;
 
