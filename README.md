@@ -21,7 +21,7 @@ Antes de executar os testes, certifique-se de ter as seguintes ferramentas insta
 * Git para clonar este repositório:
 
   ```bash
-  git clone <URL-do-repositório>
+  git clone https://github.com/AlisonHSerpa/Analise-de-desempenho.git
   ```
 
 ---
@@ -111,6 +111,12 @@ wsl --install
 ## 🔎 Conclusões
 
 > *Espaço reservado para inserção dos resultados obtidos nas análises de desempenho.*
+
+---
+
+### 💡 Observações
+
+> É importante salientar que o entendimento das linguagens utilizadas e a forma como elas foram implementadas nesse repositório pelo autor do mesmo é diferencial para os resultados obtidos nesta analise, portanto esse estudo não deve levado como resultado definitivo, mas como um projeto com fins acadêmicos.
 
 ---
 
