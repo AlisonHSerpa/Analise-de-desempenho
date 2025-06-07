@@ -2,7 +2,7 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const BubbleSort = require("./BubbleSort");
-const SelectionSort = require("./SelectionSort"); // Fixed typo in variable name
+const SelectionSort = require("./SelectionSort");
 
 async function readNumbers(filePath) {
     const numbers = [];
@@ -19,7 +19,7 @@ async function readNumbers(filePath) {
     return numbers;
 }
 
-async function writeFile(arrayNumeros, filename) { // Added filename parameter
+async function writeFile(arrayNumeros, filename) {
     const conteudo = arrayNumeros.join('\n');
     try {
         await fs.promises.writeFile(filename, conteudo);
@@ -29,14 +29,8 @@ async function writeFile(arrayNumeros, filename) { // Added filename parameter
     }
 }
 
-let caminho;
-
-// Verificar o sistema operacional
-if (os.platform() === 'win32') {  // Windows
-    caminho = path.join('D:', 'projects', 'Analise de desempenho', 'src', 'test2', 'arq.txt');
-} else {  // Linux/WSL
-    caminho = path.join('/mnt', 'd', 'projects', 'Analise de desempenho', 'src', 'test2', 'arq.txt');
-}
+// Caminho relativo ao diretório atual do script
+const caminho = path.join(__dirname, 'src', 'test2', 'arq.txt');
 
 // Uso
 (async () => {
@@ -49,7 +43,7 @@ if (os.platform() === 'win32') {  // Windows
         const endTimeBubble = process.hrtime(startTimeBubble); 
         
         await writeFile(sortedArrayBubble, 'bubble_sort_result.txt');
-        console.log(`BubbleSort executado em ${endTimeBubble[0]}s ${endTimeBubble[1]/1000000}ms`);
+        console.log(`BubbleSort executado em ${endTimeBubble[0]}s ${endTimeBubble[1]/1e6}ms`);
         console.log("Memória utilizada (BubbleSort):", process.memoryUsage().rss / 1024 / 1024, "MB");
 
         // SelectionSort
@@ -60,7 +54,7 @@ if (os.platform() === 'win32') {  // Windows
         const endTimeSelection = process.hrtime(startTimeSelection);
         
         await writeFile(sortedArraySelection, 'selection_sort_result.txt');
-        console.log(`SelectionSort executado em ${endTimeSelection[0]}s ${endTimeSelection[1]/1000000}ms`);
+        console.log(`SelectionSort executado em ${endTimeSelection[0]}s ${endTimeSelection[1]/1e6}ms`);
         console.log("Memória utilizada (SelectionSort):", process.memoryUsage().rss / 1024 / 1024, "MB");
 
     } catch (err) {
