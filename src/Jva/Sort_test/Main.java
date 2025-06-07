@@ -56,7 +56,7 @@ public class Main {
         writeFile(list);
         long memoriaTotal = memoriaDepois - memoriaAntes;
         double tempoBubble = (fimBubble - inicioBubble) / 1_000_000.0;
-        System.out.println("Memoria utilizada em bubblesort: " +memoriaTotal/1024 + " KB");
+        System.out.println("Memoria utilizada em bubblesort: " + (memoriaTotal/1024/1024) + " MB");
         System.out.printf("Tempo de execução: %.3f ms%n", tempoBubble);
 
         System.gc();
@@ -74,7 +74,7 @@ public class Main {
         writeFile(list);
         long memoriaUtilizada = memoriaPosterior - memoriAanterior;
         double tempoSelection = (fimSelection - inicioSelection) / 1_000_000.0;
-        System.out.println("Memoria utilizada em selectionsort: " + (memoriaUtilizada/1024) + " KB");
+        System.out.println("Memoria utilizada em selectionsort: " + (memoriaUtilizada/1024/1024) + " MB");
         System.out.printf("Tempo de execução: %.3f ms%n", tempoSelection);
     }
 }
