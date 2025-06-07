@@ -72,7 +72,7 @@ public class Main {
         long memoriaPosterior = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 
         writeFile(list);
-        long memoriaUtilizada = memoriaPosterior - memoriAanterior;
+        long memoriaUtilizada = memoriAanterior - memoriaPosterior;
         double tempoSelection = (fimSelection - inicioSelection) / 1_000_000.0;
         System.out.println("Memoria utilizada em selectionsort: " +memoriaUtilizada/1024 + " KB");
         System.out.printf("Tempo de execução: %.3f ms%n", tempoSelection);
