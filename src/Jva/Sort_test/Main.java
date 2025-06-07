@@ -40,7 +40,7 @@ public class Main {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        File test = new File("src/test2/arq.txt");
+        File test = new File("arq.txt");
         ArrayList<Integer> list = new ArrayList<>();
         readNumbers(test, list);
 
