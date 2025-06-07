@@ -90,7 +90,7 @@ python3 SelectionSort.py
 ```bash
 cd Java/Sort_test
 javac -d . *.java
-java Main
+java Jva.Sort_test.Main
 ```
 
 #### Node.js
