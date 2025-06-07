@@ -30,7 +30,7 @@ async function writeFile(arrayNumeros, filename) {
 }
 
 // Caminho relativo ao diretório atual do script
-const caminho = path.join(__dirname, 'src', 'test2', 'arq.txt');
+const caminho = path.join(__dirname, 'test2', 'arq.txt');
 
 // Uso
 (async () => {
