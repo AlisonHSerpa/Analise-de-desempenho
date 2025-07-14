@@ -1,7 +1,8 @@
 from typing import Union
 from fastapi import FastAPI
+import socket
 
-# uvicorn api:app --reload
+# uvicorn main:app --reload
 app = FastAPI()
 
 
