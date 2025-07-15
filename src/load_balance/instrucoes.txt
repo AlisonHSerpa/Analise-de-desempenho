@@ -1,0 +1,15 @@
+a estrutura do load balance eh simples:
+-o docker composer vai criar 2 instancias do dockerfile
+-dockerfile coloca o main.py pra rodar, entao tem 2 backends rodando
+-o docker composer chama o nginx.conf para que ele sirva de proxy reverso e realize o load balance
+
+ou seja:
+so eh necessario rodar o docker composer up --build no terminal, que ele faz o resto
+
+depois disso:
+abra outro terminal, instancie py client.py ou python client.py dependendo da sua versao do python
+para que ele realize as varias requisicoes para testar o load balance
+
+eh necessario:
+python 3.10+
+request instalado (pip install request)
