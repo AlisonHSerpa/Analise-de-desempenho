@@ -23,6 +23,14 @@ Antes de executar os testes, certifique-se de ter as seguintes ferramentas insta
   ```bash
   git clone https://github.com/AlisonHSerpa/Analise-de-desempenho.git
   ```
+  
+* instalar as bibliotecas request e fastAPI:
+
+  ```bash
+  pip install request
+  pip install fastAPI
+  ```
+* [Docker 28.3](https://www.docker.com/products/docker-desktop/)
 
 ---
 
@@ -105,6 +113,18 @@ node Reader.js
 ```bash
 wsl --install
 ```
+
+---
+
+## 🧪 Atividade 3 — Balanceador de carga (load blance)
+
+### Objetivo
+
+Criar um balanceador de carga (ou load balance), uma aplicação que administra varias instancias de backend para controlar o fluxo de requisições agindo como um proxy reverso (reverse proxy) e impedindo um overload de requisições. Essa aplicação utiliza `docker`, `nginx` e `docker compose`
+
+## ▶️ Como executar
+
+Vá até o diretorio ` ...\Analise de desempenho\src\load_balance` e siga as instruções de `instrucoes.txt`, realizando todo o processo no diretorio apontado.
 
 ---
 
